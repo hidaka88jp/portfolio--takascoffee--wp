@@ -1,0 +1,9 @@
+{
+  "name": "takascoffee-theme",
+  "private": true,
+  "scripts": {
+    "dev": "sass --watch src/scss:assets/css",
+    "build": "sass src/scss:assets/css --style=compressed"
+  },
+  "devDependencies": {}
+}
