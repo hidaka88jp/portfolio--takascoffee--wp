@@ -4,10 +4,14 @@
   "scripts": {
     "dev": "sass --watch src/scss:assets/css",
     "build": "sass src/scss:assets/css --style=compressed",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lint:css": "stylelint \"src/scss/**/*.scss\""
   },
   "devDependencies": {
     "prettier": "^3.8.1",
-    "sass": "^1.97.3"
+    "sass": "^1.97.3",
+    "stylelint": "^17.3.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-scss": "^7.0.0"
   }
 }
