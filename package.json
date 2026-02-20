@@ -5,5 +5,7 @@
     "dev": "sass --watch src/scss:assets/css",
     "build": "sass src/scss:assets/css --style=compressed"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "sass": "^1.97.3"
+  }
 }
