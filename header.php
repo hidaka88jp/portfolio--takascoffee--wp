@@ -6,3 +6,24 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+  <header class="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">
+        <img 
+          class="site-logo"
+          src="<?php echo esc_url( get_theme_file_uri('/assets/images/common/logo-header.png') ); ?>"
+          alt="<?php bloginfo('name'); ?>"
+        >
+      </a>
+      <button class="header__toggle-menu-btn" id="menu-btn"></button>
+      <div class="header__site-menu">
+        <nav class="header__site-menu-inner">
+          <ul class="header__site-menu-list">
+            <li class="header__site-menu-item"><a href="#">CONCEPT</a></li>
+            <li class="header__site-menu-item"><a href="#">MENU</a></li>
+            <li class="header__site-menu-item"><a href="#">BLOG</a></li>
+          </ul>
+        </nav>
+      </div><!-- /.site-menu -->
+    </div><!-- /.header__inner -->
+  </header>
