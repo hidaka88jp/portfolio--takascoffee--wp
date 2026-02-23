@@ -1,0 +1,138 @@
+@use 'mixin';
+@use 'variables';
+
+/*
+header
+================================================ */
+
+.header {
+  // To make the header float above the content, we use fixed positioning.
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: variables.$white;
+
+  // Set the height of the header.
+  height: 50px;
+  z-index: 10;
+  box-shadow: 0 3px 6px rgba(variables.$black, 0.1);
+
+  @include mixin.media(sm) {
+    height: 110px;
+  }
+
+  &__inner {
+    max-width: 1200px;
+    height: 100%;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @include mixin.media(sm) {
+      padding: {
+        left: 40px;
+        right: 40px;
+      }
+    }
+  }
+
+  &__toggle-menu-btn {
+    display: block;
+    width: 44px;
+    height: 34px;
+    background: {
+      image: url(../images/common/icon-menu.png);
+      size: 50%;
+      position: center;
+      repeat: no-repeat;
+
+      // Delete the default background color of the button, making it transparent.
+      color: transparent;
+    }
+
+    // Delete the default border and outline of the button.
+    border: none;
+    border-radius: 0;
+    outline: none;
+
+    @include mixin.media(sm) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 100px;
+
+    @include mixin.media(sm) {
+      width: 170px;
+    }
+  }
+
+  &__site-menu {
+    position: absolute;
+
+    // For mobile, we use absolute positioning to make the menu appear below the header.
+    top: 100%;
+    left: 0;
+    right: 0;
+    color: variables.$white;
+    background-color: variables.$gray;
+    padding: {
+      top: 30px;
+      bottom: 50px;
+    }
+
+    transform: translateX(-105vw);
+
+    // For desktop, we reset the styles for the site menu and make it static.
+    @include mixin.media(sm) {
+      position: static;
+      transform: none;
+      background-color: transparent;
+      color: variables.$black;
+      padding: 0;
+    }
+
+    // This class is added when the menu is shown, so we use it to make the menu visible.
+    // To make the menu appear without space in the CSS (e.g., .site-menu.is-show), we connect them with &.
+    &.is-show {
+      transform: translateX(0);
+    }
+
+    &-list {
+      display: block;
+      text-align: center;
+
+      @include mixin.media(sm) {
+        display: flex;
+      }
+    }
+
+    &-item {
+      margin: {
+        top: 20px;
+        left: 20px;
+        right: 20px;
+      }
+
+      font-family: variables.$eng-font;
+      font-weight: bold;
+
+      @include mixin.media(sm) {
+        margin-top: 0;
+      }
+    }
+  }
+}
