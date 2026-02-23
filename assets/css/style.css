@@ -119,11 +119,10 @@ header
     padding: 0;
   }
 }
-.header__site-menu.is-show {
+.header__site-menu.is-open {
   transform: translateX(0);
 }
 .header__site-menu-list {
-  display: block;
   text-align: center;
 }
 @media (min-width: 640px) {
@@ -131,7 +130,7 @@ header
     display: flex;
   }
 }
-.header__site-menu-item {
+.header__site-menu-list > li {
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
@@ -139,7 +138,7 @@ header
   font-weight: bold;
 }
 @media (min-width: 640px) {
-  .header__site-menu-item {
+  .header__site-menu-list > li {
     margin-top: 0;
   }
 }

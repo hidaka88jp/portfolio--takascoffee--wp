@@ -107,31 +107,30 @@ header
 
     // This class is added when the menu is shown, so we use it to make the menu visible.
     // To make the menu appear without space in the CSS (e.g., .site-menu.is-show), we connect them with &.
-    &.is-show {
+    &.is-open {
       transform: translateX(0);
     }
 
     &-list {
-      display: block;
       text-align: center;
 
       @include mixin.media(sm) {
         display: flex;
       }
-    }
 
-    &-item {
-      margin: {
-        top: 20px;
-        left: 20px;
-        right: 20px;
-      }
+      & > li {
+        margin: {
+          top: 20px;
+          left: 20px;
+          right: 20px;
+        }
 
-      font-family: variables.$eng-font;
-      font-weight: bold;
+        font-family: variables.$eng-font;
+        font-weight: bold;
 
-      @include mixin.media(sm) {
-        margin-top: 0;
+        @include mixin.media(sm) {
+          margin-top: 0;
+        }
       }
     }
   }

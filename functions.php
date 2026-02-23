@@ -6,6 +6,13 @@ function takascoffee_theme_setup() {
 
   // Support for Post Thumbnails on posts and pages.
   add_theme_support('post-thumbnails');
+
+  // Register a single navigation menu location named "Top Navigation".
+  register_nav_menus(
+    array(
+      'top-navigation' => 'Top Navigation',
+    )
+  );
 }
 
 add_action('after_setup_theme', 'takascoffee_theme_setup');

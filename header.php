@@ -17,13 +17,15 @@
       </a>
       <button class="header__toggle-menu-btn" id="menu-btn"></button>
       <div class="header__site-menu">
-        <nav class="header__site-menu-inner">
-          <ul class="header__site-menu-list">
-            <li class="header__site-menu-item"><a href="#">CONCEPT</a></li>
-            <li class="header__site-menu-item"><a href="#">MENU</a></li>
-            <li class="header__site-menu-item"><a href="#">BLOG</a></li>
-          </ul>
-        </nav>
+        <?php wp_nav_menu(
+            array(
+              'theme_location' => 'top-navigation',
+              'container' => 'nav',
+              'container_class' => 'header__site-menu-inner',
+              'menu_class' => 'header__site-menu-list',
+            )
+        ); ?>
+      </div>
       </div><!-- /.site-menu -->
     </div><!-- /.header__inner -->
   </header>
