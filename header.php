@@ -8,7 +8,7 @@
 <body <?php body_class(); ?>>
   <header class="header">
     <div class="header__inner">
-      <a href="#" class="header__logo">
+      <a href="/" class="header__logo">
         <img 
           class="site-logo"
           src="<?php echo esc_url( get_theme_file_uri('/assets/images/common/logo-header.png') ); ?>"
