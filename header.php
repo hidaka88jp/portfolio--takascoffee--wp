@@ -8,7 +8,7 @@
 <body <?php body_class(); ?>>
   <header class="header">
     <div class="header__inner">
-      <a href="#" class="header__logo">
+      <a href="/" class="header__logo">
         <img 
           class="site-logo"
           src="<?php echo esc_url( get_theme_file_uri('/assets/images/common/logo-header.png') ); ?>"
@@ -19,7 +19,7 @@
       <div class="header__site-menu">
         <?php wp_nav_menu(
             array(
-              'theme_location' => 'top-navigation',
+              'theme_location' => 'primary-navigation',
               'container' => 'nav',
               'container_class' => 'header__site-menu-inner',
               'menu_class' => 'header__site-menu-list',

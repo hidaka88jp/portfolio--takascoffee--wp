@@ -138,3 +138,84 @@ header
     }
   }
 }
+
+/*
+footer
+================================================ */
+.footer {
+  color: variables.$color-text-inverse;
+  background-color: variables.$color-footer-surface;
+  padding: {
+    top: 30px;
+    bottom: 30px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__site-menu {
+    &-list {
+      display: block;
+      text-align: center;
+
+      @include mixin.media(sm) {
+        display: flex;
+      }
+
+      & > li {
+        margin: 20px 20px 0;
+        font-family: variables.$eng-font;
+        font-weight: bold;
+
+        @include mixin.media(sm) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    width: 235px;
+    margin-top: 60px;
+
+    @include mixin.media(sm) {
+      margin-top: 90px;
+    }
+  }
+
+  &__tel {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 28px;
+
+    @include mixin.media(sm) {
+      font-size: 26px;
+    }
+  }
+
+  &__time {
+    font-size: 13px;
+    margin-top: 16px;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 50px;
+    text-align: center;
+
+    @include mixin.media(sm) {
+      margin-top: 90px;
+    }
+
+    &-link {
+      text-decoration: underline;
+    }
+  }
+}
+
+main {
+  height: 500px;
+}
