@@ -17,13 +17,13 @@ function takascoffee_theme_setup() {
 
 add_action('after_setup_theme', 'takascoffee_theme_setup');
 
-function takascoffee_enqueue_styles() {
+function takascoffee_enqueue_assets() {
   // Enqueue the main stylesheet with a version number based on the file modification time for cache busting.
   wp_enqueue_style(
     'takascoffee-style',
     get_theme_file_uri('/assets/css/style.css'),
     [],
-    filemtime(get_template_directory() . '/assets/css/style.css')
+    filemtime(get_theme_file_path('/assets/css/style.css'))
   );
 
   // Enqueue Google Fonts.
