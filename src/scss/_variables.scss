@@ -1,8 +1,19 @@
 $white: #fff;
 $black: #000;
-$gray: #736e62;
-$theme-black: #24211b;
-$yellow: #f4dd64;
-$deepyelllow: #d8b500;
-$light-gray: #f8f8f8;
+
+// text / base
+$color-text: $black;
+$color-text-inverse: $white;
+$color-bg: $white;
+
+// surfaces
+$color-surface: #f8f8f8; // Background color for the main content area if needed.
+$color-nav-surface: #736e62; // Mobile navigation background color
+$color-footer-surface: #24211b; // Footer background color
+
+// action (button)
+$color-button: #f4dd64;
+$color-button-hover: #d8b500;
+
+// Fonts
 $eng-font: 'Montserrat', sans-serif;

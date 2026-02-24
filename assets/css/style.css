@@ -101,6 +101,7 @@ header
 }
 .header__site-menu {
   position: absolute;
+  display: block;
   top: 100%;
   left: 0;
   right: 0;
