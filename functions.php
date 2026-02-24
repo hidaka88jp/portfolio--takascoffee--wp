@@ -10,7 +10,7 @@ function takascoffee_theme_setup() {
   // Register a single navigation menu location named "Top Navigation".
   register_nav_menus(
     array(
-      'top-navigation' => 'Top Navigation',
+      'primary-navigation' => 'Primary Navigation',
     )
   );
 }

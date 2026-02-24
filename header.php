@@ -19,7 +19,7 @@
       <div class="header__site-menu">
         <?php wp_nav_menu(
             array(
-              'theme_location' => 'top-navigation',
+              'theme_location' => 'primary-navigation',
               'container' => 'nav',
               'container_class' => 'header__site-menu-inner',
               'menu_class' => 'header__site-menu-list',
