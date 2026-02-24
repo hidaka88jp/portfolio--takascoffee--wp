@@ -109,7 +109,8 @@ header
   background-color: #736e62;
   padding-top: 30px;
   padding-bottom: 50px;
-  transform: translateX(-105vw);
+  transform: translateX(105vw);
+  transition: transform 300ms ease;
 }
 @media (min-width: 640px) {
   .header__site-menu {

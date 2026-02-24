@@ -33,6 +33,15 @@ function takascoffee_enqueue_styles() {
     [],
     null
   );
+
+  // Enqueue the JavaScript file with a version number based on the file modification time for cache busting.
+  wp_enqueue_script(
+    'takascoffee-main',
+    get_theme_file_uri('/assets/js/main.js'),
+    [],
+    filemtime(get_theme_file_path('/assets/js/main.js')),
+    true
+  );
 }
 
 add_action('wp_enqueue_scripts', 'takascoffee_enqueue_styles');
