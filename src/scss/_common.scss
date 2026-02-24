@@ -97,7 +97,8 @@ header
       bottom: 50px;
     }
 
-    transform: translateX(-105vw);
+    transform: translateX(105vw);
+    transition: transform 300ms ease;
 
     // For desktop, we reset the styles for the site menu and make it static.
     @include mixin.media(sm) {
