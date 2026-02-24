@@ -15,7 +15,14 @@
     </a>
     <p class="footer__tel">TEL 01-2345-6789</p>
     <p class="footer__time">OPEN Fri-Sun 11:00-16:00</p>
-    <p class="footer__copyright"><small>&copy;Taka's Coffee</small></p>
+    <p class="footer__copyright">
+      <small>
+        &copy;2026 Takanori Hidaka<br>
+        Taka's Coffee is a fictional project created for portfolio purposes.<br>
+        The design is based on exercises from the Japanese book 
+        <a href="https://gihyo.jp/book/2022/978-4-297-12510-3" target="_blank" rel="noopener noreferrer" class="footer__copyright-link">"HTML&CSSとWebデザインが1冊できちんと身につく本"</a>.
+      </small>
+    </p>
   </footer>
   <?php wp_footer(); ?>
 </body>

@@ -203,11 +203,15 @@ footer
   font-size: 14px;
   font-weight: bold;
   margin-top: 50px;
+  text-align: center;
 }
 @media (min-width: 640px) {
   .footer__copyright {
     margin-top: 90px;
   }
+}
+.footer__copyright-link {
+  text-decoration: underline;
 }
 
 main {

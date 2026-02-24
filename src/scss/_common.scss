@@ -204,9 +204,14 @@ footer
     font-size: 14px;
     font-weight: bold;
     margin-top: 50px;
+    text-align: center;
 
     @include mixin.media(sm) {
       margin-top: 90px;
+    }
+
+    &-link {
+      text-decoration: underline;
     }
   }
 }
