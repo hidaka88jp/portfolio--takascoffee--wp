@@ -44,4 +44,4 @@ function takascoffee_enqueue_assets() {
   );
 }
 
-add_action('wp_enqueue_scripts', 'takascoffee_enqueue_styles');
+add_action('wp_enqueue_scripts', 'takascoffee_enqueue_assets');
