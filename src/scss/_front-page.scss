@@ -1,0 +1,67 @@
+@use 'mixin';
+@use 'variables';
+
+/* hero
+================================================ */
+.hero {
+  height: calc(100dvh - 50px);
+  background-image: url("../images/front-page/bg-main-sp.jpg");
+  align-items: flex-start;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+
+  @include mixin.media(sm) {
+    height: calc(100dvh - 110px);
+    background-image: url("../images/front-page/bg-main.jpg");
+    align-items: center;
+  }
+
+  &__text {
+    // Since the parent element is stretched to fill the entire browser width, we set a max-width of 1200px here to constrain the width of the text content.
+    width: 100%;
+    max-width: 1200px;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    padding: {
+      top: 80px;
+      left: 20px;
+    }
+
+    color: variables.$color-text-inverse;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px #4b2c14;
+
+    @include mixin.media(sm) {
+      padding: {
+        top: 60px;
+        left: 40px;
+        bottom: 80px;
+      }
+    }
+  }
+
+  &__heading {
+    font-family: variables.$eng-font;
+    font-size: 36px;
+    line-height: 48px;
+
+    @include mixin.media(sm) {
+      font-size: 56px;
+      line-height: 72px;
+    }
+  }
+
+  &__subheading {
+    font-size: 14px;
+    margin-top: 15px;
+
+    @include mixin.media(sm) {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+}
