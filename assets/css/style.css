@@ -220,7 +220,7 @@ footer
 ================================================ */
 .hero {
   height: calc(100dvh - 50px);
-  background-image: url(../images/front-page/bg-main-sp.jpg);
+  background-image: url('../images/front-page/bg-main-sp.jpg');
   align-items: flex-start;
   background-repeat: no-repeat;
   background-position: center;
@@ -230,7 +230,7 @@ footer
 @media (min-width: 640px) {
   .hero {
     height: calc(100dvh - 110px);
-    background-image: url(../images/front-page/bg-main.jpg);
+    background-image: url('../images/front-page/bg-main.jpg');
     align-items: center;
   }
 }
@@ -272,6 +272,38 @@ footer
     font-size: 18px;
     margin-top: 20px;
   }
+}
+
+/* lead
+================================================ */
+.lead {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.lead__quote {
+  font-weight: bold;
+  text-align: left;
+}
+@media (min-width: 640px) {
+  .lead__quote {
+    text-align: center;
+  }
+}
+.lead__sentence {
+  line-height: 1.4;
+  text-align: left;
+}
+@media (min-width: 640px) {
+  .lead__sentence {
+    text-align: center;
+    line-height: 1.6;
+  }
+}
+.lead__link-button-area {
+  text-align: center;
+  margin-top: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
