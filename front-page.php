@@ -15,7 +15,7 @@
       And in moments like these, a good cup of coffee makes it even better.
     </p>
     <div class="lead__link-button-area">
-      <a href="./concept.html" class="link-button">CONCEPT</a>
+      <a href="/concept" class="link-button">CONCEPT</a>
     </div>
   </div><!-- /.lead -->
 </main>
