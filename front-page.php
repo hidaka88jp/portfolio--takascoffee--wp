@@ -18,6 +18,26 @@
       <a href="/concept" class="link-button">CONCEPT</a>
     </div>
   </div><!-- /.lead -->
+  <div class="recommended">
+      <h2 class="recommended__heading">RECOMMENDED</h2>
+      <ul class="recommended__item-list">
+        <li class="recommended__items">
+          <img 
+            src="<?php echo esc_url( get_theme_file_uri('/assets/images/dev/img-item-sample.jpg') ); ?>"
+            alt="商品画像"
+            class="recommended__item-image"
+          >
+          <dl class="recommended__item-desc">
+            <dt class="recommended__item-name">CAFE LATTE</dt>
+            <dd class="recommended__item-sentence">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+          </dl>
+          <p class="recommended__price">$4.6</p>
+        </li>
+      </ul>
+      <div class="recommended__link-button-area">
+        <a href="/menu" class="link-button">MENU</a>
+      </div>
+  </div><!-- /.recommended -->
 </main>
 
 <?php get_footer(); ?>
