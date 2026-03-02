@@ -45,3 +45,24 @@ function takascoffee_enqueue_assets() {
 }
 
 add_action('wp_enqueue_scripts', 'takascoffee_enqueue_assets');
+
+function register_menu_post_type() {
+  register_post_type('menu', [
+    'label' => 'Menu',
+    'public' => true,
+    'has_archive' => true,
+    'supports' => ['title', 'editor', 'thumbnail', 'page-attributes'],
+    'show_in_rest' => true,
+  ]);
+}
+
+add_action('init', 'register_menu_post_type');
+
+function register_menu_taxonomy() {
+  register_taxonomy('menu_category', 'menu', [
+    'label' => 'Menu Category',
+    'hierarchical' => false,
+    'show_in_rest' => true,
+  ]);
+}
+add_action('init', 'register_menu_taxonomy');
