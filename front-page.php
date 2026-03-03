@@ -20,20 +20,45 @@
   </div><!-- /.lead -->
   <div class="recommended">
       <h2 class="recommended__heading">RECOMMENDED</h2>
-      <ul class="recommended__item-list">
-        <li class="recommended__items">
-          <img 
-            src="<?php echo esc_url( get_theme_file_uri('/assets/images/dev/img-item-sample.jpg') ); ?>"
-            alt="商品画像"
-            class="recommended__item-image"
-          >
-          <dl class="recommended__item-desc">
-            <dt class="recommended__item-name">CAFE LATTE</dt>
-            <dd class="recommended__item-sentence">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
-          </dl>
-          <p class="recommended__price">$4.6</p>
-        </li>
-      </ul>
+      <div class="recommended__scroll">
+        <ul class="recommended__item-list">
+          <?php
+            $args = [
+              'post_type' => 'menu',
+              'meta_query' => [
+                [
+                  'key' => 'recommended',
+                  'value' => 1,
+                ]
+              ],
+              'orderby' => 'menu_order',
+              'order'   => 'ASC',
+            ];
+
+            $query = new WP_Query($args);
+
+            if ($query->have_posts()) :
+              while ($query->have_posts()) : $query->the_post();
+          ?>
+          <li class="recommended__items">
+            <?php if (has_post_thumbnail()) : ?>
+              <?php the_post_thumbnail('medium', [
+                'class' => 'recommended__item-image'
+              ]); ?>
+            <?php endif; ?>
+            <dl class="recommended__item-desc">
+              <dt class="recommended__item-name"><?php the_title(); ?></dt>
+              <dd class="recommended__item-sentence"><?php the_excerpt(); ?></dd>
+            </dl>
+            <p class="recommended__price">$<?php echo esc_html( get_field('price') ); ?></p>
+          </li>
+          <?php
+            endwhile;
+            wp_reset_postdata();
+          endif;
+          ?>
+        </ul>
+      </div><!-- /.recommended__scroll -->
       <div class="recommended__link-button-area">
         <a href="/menu" class="link-button">MENU</a>
       </div>

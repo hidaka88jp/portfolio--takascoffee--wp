@@ -37,6 +37,10 @@ img {
   height: auto;
 }
 
+/* Media query mixin
+================================================ */
+/* UI components mixins
+================================================ */
 /*
 header
 ================================================ */
@@ -301,10 +305,9 @@ footer
     line-height: 1.6;
   }
 }
-.lead__link-button-area,
-.recommended__link-button-area {
-  text-align: center;
+.lead__link-button-area {
   margin-top: 40px;
+  text-align: center;
 }
 
 /*
@@ -330,33 +333,38 @@ reccomended
   margin-left: auto;
   margin-right: auto;
 }
-.recommended__item-list {
-  display: flex;
-  padding-top: 40px;
-  padding-bottom: 10px;
+.recommended__scroll {
+  overflow-x: auto;
   padding-left: 20px;
   padding-right: 20px;
-  overflow: auto;
 }
-@media (min-width: 640px) {
-  .recommended__item-list {
+@media (min-width: 1024px) {
+  .recommended__scroll {
     padding-left: 60px;
     padding-right: 60px;
+  }
+}
+.recommended__item-list {
+  display: flex;
+  gap: 30px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  width: fit-content;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .recommended__item-list {
+    gap: 75px;
   }
 }
 .recommended__items {
   flex-shrink: 0;
   width: 220px;
-  margin-left: 30px;
 }
 @media (min-width: 640px) {
   .recommended__items {
     width: 260px;
-    margin-left: 75px;
   }
-}
-.recommended__items:first-child {
-  margin-left: 0;
 }
 .recommended__item-image {
   width: 100%;
@@ -379,6 +387,11 @@ reccomended
   font-weight: bold;
   margin-top: 15px;
 }
+.recommended__link-button-area {
+  margin-top: 40px;
+  text-align: center;
+}
+
 .link-button {
   display: inline-flex;
   align-items: center;

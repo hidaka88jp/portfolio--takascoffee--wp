@@ -130,15 +130,14 @@ reccomended
     }
   }
 
-  &__item-list {
-    display: flex;
+  &__scroll {
+    overflow-x: auto;
     padding: {
-      inset: 40px 20px 10px 20px;
+      left: 20px;
+      right: 20px;
     }
 
-    overflow: auto;
-
-    @include mixin.media(sm) {
+    @include mixin.media(lg) {
       padding: {
         left: 60px;
         right: 60px;
@@ -146,18 +145,28 @@ reccomended
     }
   }
 
+  &__item-list {
+    display: flex;
+    gap: 30px;
+    padding: {
+      top: 40px;
+      bottom: 10px;
+    }
+
+    width: fit-content;
+    margin: 0 auto;
+
+    @include mixin.media(lg) {
+      gap: 75px;
+    }
+  }
+
   &__items {
     flex-shrink: 0;
     width: 220px;
-    margin-left: 30px;
 
     @include mixin.media(sm) {
       width: 260px;
-      margin-left: 75px;
-    }
-
-    &:first-child {
-      margin-left: 0;
     }
   }
 
