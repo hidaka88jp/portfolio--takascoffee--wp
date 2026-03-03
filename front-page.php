@@ -15,7 +15,9 @@
       And in moments like these, a good cup of coffee makes it even better.
     </p>
     <div class="lead__link-button-area">
-      <a href="/concept" class="link-button">CONCEPT</a>
+      <a href="<?php echo esc_url( home_url('/concept/') ); ?>" class="link-button">
+        CONCEPT
+      </a>
     </div>
   </div><!-- /.lead -->
   <div class="recommended">
@@ -60,7 +62,9 @@
         </ul>
       </div><!-- /.recommended__scroll -->
       <div class="recommended__link-button-area">
-        <a href="/menu" class="link-button">MENU</a>
+        <a href="<?php echo esc_url( home_url('/menu/') ); ?>" class="link-button">
+          MENU
+        </a>
       </div>
   </div><!-- /.recommended -->
 </main>
