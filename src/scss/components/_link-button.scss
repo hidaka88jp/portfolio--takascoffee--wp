@@ -12,7 +12,8 @@
   font-size: 14px;
   transition: background-color 0.2s ease;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: variables.$color-button-hover;
   }
 }

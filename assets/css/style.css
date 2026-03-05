@@ -404,7 +404,8 @@ reccomended
   font-size: 14px;
   transition: background-color 0.2s ease;
 }
-.link-button:hover {
+.link-button:hover,
+.link-button:focus-visible {
   background-color: #d8b500;
 }
 
