@@ -21,7 +21,6 @@ a {
 
 html {
   font-size: 100%;
-  overflow-x: hidden;
 }
 
 body {
@@ -29,6 +28,7 @@ body {
   color: #000;
   line-height: 1.6;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 img {
@@ -218,6 +218,13 @@ footer
 }
 .footer__copyright-link {
   text-decoration: underline;
+}
+
+/*
+Common styles for pages
+================================================ */
+.page {
+  margin-bottom: 100px;
 }
 
 /* hero
