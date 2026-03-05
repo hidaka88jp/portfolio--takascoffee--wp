@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
-<main class="page content">
+<main class="page concept">
 
-  <h1><?php the_title(); ?></h1>
+  <div class="page-hero">
+    <h1 class="page-hero__title"><?php the_title(); ?></h1>
+  </div>
 
   <div class="entry-content">
     <?php the_content(); ?>

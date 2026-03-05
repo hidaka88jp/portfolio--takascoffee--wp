@@ -1,0 +1,21 @@
+@use '../variables';
+
+.page-hero {
+  height: 310px;
+  background: {
+    position: center;
+    size: cover;
+  }
+
+  color: variables.$color-text-inverse;
+  text-shadow: 1px 1px 10px #4b3c14;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    font-family: variables.$eng-font;
+    font-size: 32px;
+    font-weight: bold;
+  }
+}

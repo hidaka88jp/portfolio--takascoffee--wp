@@ -399,6 +399,10 @@ reccomended
   text-align: center;
 }
 
+.concept .page-hero {
+  background-image: url('../images/concept/bg-concept.jpg');
+}
+
 .link-button {
   display: inline-flex;
   align-items: center;
@@ -414,6 +418,22 @@ reccomended
 .link-button:hover,
 .link-button:focus-visible {
   background-color: #d8b500;
+}
+
+.page-hero {
+  height: 310px;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  text-shadow: 1px 1px 10px #4b3c14;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-hero__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
