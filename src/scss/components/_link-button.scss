@@ -1,0 +1,19 @@
+@use '../variables';
+
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: variables.$color-button;
+  font-family: variables.$eng-font;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background-color: variables.$color-button-hover;
+  }
+}

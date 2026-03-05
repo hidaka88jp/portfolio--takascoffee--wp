@@ -7,7 +7,7 @@ header
 
 .header {
   // To make the header float above the content, we use fixed positioning.
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -215,8 +215,4 @@ footer
       text-decoration: underline;
     }
   }
-}
-
-main {
-  height: 500px;
 }

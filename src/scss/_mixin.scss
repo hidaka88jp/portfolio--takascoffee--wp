@@ -1,10 +1,15 @@
 @use 'sass:map';
 
+/* Media query mixin
+================================================ */
+
+// Define breakpoints for responsive design.
 $breakpoints: (
   sm: 640px,
   lg: 1024px,
 );
 
+// Mixin for media queries.
 @mixin media($breakpoint) {
   $value: map.get($breakpoints, $breakpoint);
 
@@ -15,4 +20,13 @@ $breakpoints: (
   } @else {
     @warn "No value found for breakpoint: #{$breakpoint}";
   }
+}
+
+/* UI components mixins
+================================================ */
+
+// Mixin for link button area.
+@mixin link-button-area {
+  margin-top: 40px;
+  text-align: center;
 }

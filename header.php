@@ -12,7 +12,7 @@
         <img 
           class="site-logo"
           src="<?php echo esc_url( get_theme_file_uri('/assets/images/common/logo-header.png') ); ?>"
-          alt="<?php esc_attr( get_bloginfo('name') ); ?>"
+          alt="<?php echo esc_attr( get_bloginfo('name') ); ?>"
         >
       </a>
       <button class="header__toggle-menu-btn" id="menu-btn"></button>

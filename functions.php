@@ -17,13 +17,13 @@ function takascoffee_theme_setup() {
 
 add_action('after_setup_theme', 'takascoffee_theme_setup');
 
-function takascoffee_enqueue_styles() {
+function takascoffee_enqueue_assets() {
   // Enqueue the main stylesheet with a version number based on the file modification time for cache busting.
   wp_enqueue_style(
     'takascoffee-style',
     get_theme_file_uri('/assets/css/style.css'),
     [],
-    filemtime(get_template_directory() . '/assets/css/style.css')
+    filemtime(get_theme_file_path('/assets/css/style.css'))
   );
 
   // Enqueue Google Fonts.
@@ -44,4 +44,25 @@ function takascoffee_enqueue_styles() {
   );
 }
 
-add_action('wp_enqueue_scripts', 'takascoffee_enqueue_styles');
+add_action('wp_enqueue_scripts', 'takascoffee_enqueue_assets');
+
+function register_menu_post_type() {
+  register_post_type('menu', [
+    'label' => 'Menu',
+    'public' => true,
+    'has_archive' => true,
+    'supports' => ['title', 'editor', 'thumbnail', 'page-attributes'],
+    'show_in_rest' => true,
+  ]);
+}
+
+add_action('init', 'register_menu_post_type');
+
+function register_menu_taxonomy() {
+  register_taxonomy('menu_category', 'menu', [
+    'label' => 'Menu Category',
+    'hierarchical' => false,
+    'show_in_rest' => true,
+  ]);
+}
+add_action('init', 'register_menu_taxonomy');
