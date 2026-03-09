@@ -403,6 +403,69 @@ reccomended
   background-image: url('../images/concept/bg-concept.jpg');
 }
 
+.concept-section {
+  width: 100%;
+  max-width: 90%;
+  margin-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 640px) {
+  .concept-section {
+    width: 930px;
+  }
+}
+.concept-section__item {
+  margin-top: 75px;
+}
+@media (min-width: 640px) {
+  .concept-section__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+@media (min-width: 640px) {
+  .concept-section__item--reverse {
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 640px) {
+  .concept-section__text-area {
+    max-width: 500px;
+  }
+}
+.concept-section__image {
+  width: 100%;
+  height: auto;
+  margin-top: 25px;
+}
+@media (min-width: 640px) {
+  .concept-section__image {
+    width: 360px;
+    margin-top: 0;
+  }
+}
+.concept-section__subtitle {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
+}
+.concept-section__subtitle::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: #000;
+  margin-top: 20px;
+}
+.concept-section__desc {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-top: 25px;
+}
+
 .link-button {
   display: inline-flex;
   align-items: center;

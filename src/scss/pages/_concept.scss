@@ -1,3 +1,75 @@
+@use '../mixin';
+@use '../variables';
+
 .concept .page-hero {
   background-image: url('../images/concept/bg-concept.jpg');
+}
+
+.concept-section {
+  width: 100%;
+  max-width: 90%;
+  margin: {
+    top: 45px;
+    left: auto;
+    right: auto;
+  }
+
+  @include mixin.media(sm) {
+    width: 930px;
+  }
+
+  &__item {
+    margin-top: 75px;
+
+    @include mixin.media(sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    &--reverse {
+      @include mixin.media(sm) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__text-area {
+    @include mixin.media(sm) {
+      max-width: 500px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+
+    @include mixin.media(sm) {
+      width: 360px;
+      margin-top: 0;
+    }
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 3px;
+      background-color: variables.$color-text;
+      margin-top: 20px;
+    }
+  }
+
+  &__desc {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: 25px;
+  }
 }
