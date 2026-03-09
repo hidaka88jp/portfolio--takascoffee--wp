@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="page concept">
+<main class="page-content concept">
 
   <div class="page-hero">
     <h1 class="page-hero__title"><?php the_title(); ?></h1>
