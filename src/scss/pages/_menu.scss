@@ -7,7 +7,7 @@
 .menu-list {
   width: 930px;
 
-  // To create 5% margin on both sides of the list, we set the width to 90% and center it.
+  // Use a 930px base width, but cap it at 90% of the viewport to keep ~5% side margins on smaller screens, and center it.
   max-width: 90%;
   margin: 45px auto 0;
   display: grid;
