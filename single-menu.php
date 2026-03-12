@@ -20,7 +20,7 @@
               <div class="menu-contents__item-text">
                 <?php the_content(); ?>
               </div>
-              <p class="menu-contents__item-price">$<?php the_field('price'); ?></p>
+              <p class="menu-contents__item-price">$<?php echo esc_html( get_field('price') ); ?></p>
             </div><!-- menu-contents__about-item -->
           </div><!-- menu-contents__item-area -->
         </div><!-- menu-contents__items -->
