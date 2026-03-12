@@ -49,7 +49,7 @@
           </section>
         <?php endif; ?>
         <div class="menu-contents__link-button-area">
-          <a href="<?php echo get_post_type_archive_link('menu'); ?>" class="link-button">
+          <a href="<?php echo esc_url( get_post_type_archive_link('menu') ); ?>" class="link-button">
             Back to Menu
           </a>
         </div>
