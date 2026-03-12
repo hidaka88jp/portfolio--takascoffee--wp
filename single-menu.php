@@ -34,7 +34,7 @@
             <ul class="menu-contents__item-list">
               <?php foreach ($recommended_items as $recommended_post) : ?>
                 <li class="menu-contents__item">
-                  <a href="<?php echo get_permalink($recommended_post); ?>" class="menu-contents__link">
+                  <a href="<?php echo esc_url(get_permalink($recommended_post)); ?>" class="menu-contents__link">
                     <?php echo get_the_post_thumbnail($recommended_post->ID, 'medium'); ?>
                     <dl class="menu-contents__item-desc">
                       <dt class="menu-contents__item-name"><?php echo get_the_title($recommended_post); ?></dt>
