@@ -12,6 +12,7 @@
       foreach ($categories as $category) :
         $query = new WP_Query([
           'post_type' => 'menu',
+          'posts_per_page' => -1,
           'tax_query' => [
             [
               'taxonomy' => 'menu_category',
