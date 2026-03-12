@@ -52,7 +52,7 @@
           <a href="<?php echo get_post_type_archive_link('menu'); ?>" class="link-button">
             Back to Menu
           </a>
-        </div>  
+        </div>
       </article>
     <?php endwhile; ?>
   <?php endif; ?>
