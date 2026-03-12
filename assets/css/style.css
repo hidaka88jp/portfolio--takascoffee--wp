@@ -466,6 +466,9 @@ reccomended
   margin-top: 25px;
 }
 
+/*
+Menu archive page
+================================================ */
 .menu .page-hero {
   background-image: url('../images/menu/bg-menu.jpg');
 }
@@ -476,8 +479,7 @@ reccomended
   margin: 45px auto 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, 240px);
-  column-gap: 95px;
-  row-gap: 40px;
+  gap: 40px 95px;
   justify-content: center;
 }
 @media (min-width: 640px) {
@@ -519,6 +521,115 @@ reccomended
   white-space: nowrap;
   transform-origin: top left;
   transform: rotate(90deg);
+}
+
+/*
+Menu single page
+================================================ */
+.menu-contents {
+  width: 765px;
+  max-width: 100%;
+  margin: 60px auto 100px;
+  padding: 0 20px;
+}
+@media (min-width: 640px) {
+  .menu-contents {
+    margin-top: 75px;
+    padding: 0;
+  }
+}
+.menu-contents__items {
+  flex-grow: 1;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 640px) {
+  .menu-contents__items {
+    max-width: 100%;
+  }
+}
+.menu-contents__heading {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
+}
+.menu-contents__heading::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: #000;
+  margin-top: 20px;
+}
+.menu-contents__item-area {
+  margin-top: 20px;
+  display: block;
+}
+@media (min-width: 640px) {
+  .menu-contents__item-area {
+    display: flex;
+  }
+}
+@media (min-width: 640px) {
+  .menu-contents__item-img {
+    width: 50%;
+    max-width: 380px;
+  }
+}
+.menu-contents__about-item {
+  margin-top: 20px;
+}
+@media (min-width: 640px) {
+  .menu-contents__about-item {
+    width: 50%;
+    margin-left: 30px;
+  }
+}
+.menu-contents__item-text {
+  line-height: 1.6;
+}
+.menu-contents__item-price {
+  font-weight: bold;
+  margin-top: 20px;
+}
+.menu-contents__recommended {
+  margin-top: 60px;
+}
+.menu-contents__item-list {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 35px;
+  row-gap: 40px;
+}
+@media (min-width: 640px) {
+  .menu-contents__item-list {
+    grid-template-columns: repeat(auto-fit, 220px);
+    column-gap: 50px;
+  }
+}
+.menu-contents__link {
+  display: block;
+  transition-duration: 0.2s;
+}
+.menu-contents__link:hover {
+  transform: scale(1.05);
+}
+.menu-contents__item-desc {
+  margin-top: 20px;
+}
+.menu-contents__item-name {
+  font-weight: bold;
+}
+.menu-contents__item-sentence {
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+.menu-contents__link-button-area {
+  margin-top: 40px;
+  text-align: center;
 }
 
 .link-button {
