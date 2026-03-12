@@ -1,0 +1,64 @@
+@use '../mixin';
+
+.menu .page-hero {
+  background-image: url('../images/menu/bg-menu.jpg');
+}
+
+.menu-list {
+  width: 930px;
+
+  // Use a 930px base width, but cap it at 90% of the viewport to keep ~5% side margins on smaller screens, and center it.
+  max-width: 90%;
+  margin: 45px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 240px);
+  gap: 40px 95px;
+  justify-content: center;
+
+  @include mixin.media(sm) {
+    margin-top: 75px;
+    row-gap: 70px;
+  }
+
+  &__items {
+    position: relative;
+  }
+
+  &__link {
+    display: block;
+    transition-duration: 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__item-desc {
+    margin-top: 20px;
+  }
+
+  &__item-name {
+    font-weight: bold;
+  }
+
+  &__item-sentence {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+
+  &__price {
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  &__category {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 22px);
+    font-size: 12px;
+    white-space: nowrap;
+    transform-origin: top left;
+    transform: rotate(90deg);
+  }
+}

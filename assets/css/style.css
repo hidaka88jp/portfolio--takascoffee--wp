@@ -466,6 +466,61 @@ reccomended
   margin-top: 25px;
 }
 
+.menu .page-hero {
+  background-image: url('../images/menu/bg-menu.jpg');
+}
+
+.menu-list {
+  width: 930px;
+  max-width: 90%;
+  margin: 45px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 240px);
+  column-gap: 95px;
+  row-gap: 40px;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .menu-list {
+    margin-top: 75px;
+    row-gap: 70px;
+  }
+}
+.menu-list__items {
+  position: relative;
+}
+.menu-list__link {
+  display: block;
+  transition-duration: 0.2s;
+}
+.menu-list__link:hover {
+  transform: scale(1.05);
+}
+.menu-list__item-desc {
+  margin-top: 20px;
+}
+.menu-list__item-name {
+  font-weight: bold;
+}
+.menu-list__item-sentence {
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+.menu-list__price {
+  font-weight: bold;
+  margin-top: 15px;
+}
+.menu-list__category {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 22px);
+  font-size: 12px;
+  white-space: nowrap;
+  transform-origin: top left;
+  transform: rotate(90deg);
+}
+
 .link-button {
   display: inline-flex;
   align-items: center;
