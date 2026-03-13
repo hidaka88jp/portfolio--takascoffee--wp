@@ -66,3 +66,8 @@ function register_menu_taxonomy() {
   ]);
 }
 add_action('init', 'register_menu_taxonomy');
+
+function custom_excerpt_more($more) {
+  return '...';
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
