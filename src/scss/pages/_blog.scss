@@ -1,0 +1,122 @@
+@use '../mixin';
+@use '../variables';
+
+/*
+blog archive page
+================================================ */
+.blog .page-hero {
+  background-image: url('../images/blog/bg-blog.jpg');
+}
+
+.blog-section {
+  width: 100%;
+  max-width: 90%;
+  margin: {
+    top: 45px;
+    left: auto;
+    right: auto;
+  }
+
+  @include mixin.media(sm) {
+    width: 930px;
+    margin-top: 75px;
+  }
+
+  &__pagination {
+    margin-top: 50px;
+
+    .navigation {
+      margin: 0 auto;
+      width: max-content;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .page-numbers {
+      display: inline-block;
+      text-align: center;
+      color: variables.$color-text;
+      text-decoration: none;
+      font-size: 1.1rem;
+
+      &.current {
+        font-weight: bold;
+        color: variables.$color-link;
+      }
+
+      &:hover:not(.current, .dots),
+      &:focus:not(.current, .dots) {
+        color: variables.$color-link-hover;
+      }
+
+      &.dots {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.blog-list {
+  &__item {
+    margin-top: 45px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid variables.$color-text;
+  }
+
+  &__link {
+    @include mixin.media(sm) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+
+    @include mixin.media(sm) {
+      width: 360px;
+      margin-top: 0;
+    }
+  }
+
+  &__desc {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: 25px;
+    flex: 1;
+
+    @include mixin.media(sm) {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 3px;
+      background-color: variables.$color-text;
+      margin-top: 20px;
+    }
+  }
+
+  &__sentence {
+    margin-top: 20px;
+  }
+}
