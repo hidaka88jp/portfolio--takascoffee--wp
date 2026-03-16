@@ -16,7 +16,7 @@
 
           <li class="blog-list__item">
             <article>
-              <a href="<?php the_permalink(); ?>" class="blog-list__link">
+              <a href="<?php echo esc_url( get_permalink() ); ?>" class="blog-list__link">
 
                 <?php if ( has_post_thumbnail() ) : ?>
                   <?php the_post_thumbnail('medium', [
