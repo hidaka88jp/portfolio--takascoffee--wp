@@ -26,7 +26,7 @@
 
                 <div class="blog-list__desc">
                   <h2 class="blog-list__title"><?php the_title(); ?></h2>
-                  <p class="blog-list__sentence"><?php the_excerpt(); ?></p>
+                  <div class="blog-list__sentence"><?php the_excerpt(); ?></div>
                 </div>
 
               </a>
