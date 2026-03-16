@@ -54,7 +54,7 @@ blog archive page
         color: variables.$color-link-hover;
       }
 
-      .dots {
+      &.dots {
         pointer-events: none;
       }
     }
