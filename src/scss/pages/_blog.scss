@@ -120,3 +120,130 @@ blog archive page
     margin-top: 20px;
   }
 }
+
+/*
+blog single page
+================================================ */
+.blog-contents {
+  width: 100%;
+  max-width: 90%;
+  margin: 45px auto 0;
+
+  @include mixin.media(sm) {
+    width: 640px;
+    margin-top: 75px;
+  }
+
+  &__heading {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 3px;
+      background-color: variables.$color-text;
+      margin-top: 10px;
+    }
+  }
+
+  &__date {
+    display: block;
+    margin-top: 8px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    margin-top: 8px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  &__entry {
+    margin-top: 25px;
+
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.4;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 8px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+  }
+
+  &__navigation {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  &__navigation-prev {
+    justify-self: start;
+
+    // & .blog-contents__navigation-text {
+    //   @include mixin.media(sm) {
+    //     margin-right: 15px;
+    //   }
+    // }
+  }
+
+  &__navigation-next {
+    justify-self: end;
+
+    // & .blog-contents__navigation-text {
+    //   @include mixin.media(sm) {
+    //     margin-left: 15px;
+    //   }
+    // }
+  }
+
+  &__navigation-prev a,
+  &__navigation-next a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 62px;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 24px;
+    background-color: variables.$color-button;
+    font-family: variables.$eng-font;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      background-color: variables.$color-button-hover;
+    }
+
+    @include mixin.media(sm) {
+      min-width: 180px;
+    }
+  }
+
+  &__navigation-icon {
+    padding: 0 4px;
+  }
+
+  &__navigation-text {
+    display: none;
+
+    @include mixin.media(sm) {
+      display: inline;
+    }
+  }
+}
