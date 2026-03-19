@@ -194,21 +194,21 @@ blog single page
   &__navigation-prev {
     justify-self: start;
 
-    // & .blog-contents__navigation-text {
-    //   @include mixin.media(sm) {
-    //     margin-right: 15px;
-    //   }
-    // }
+    & .blog-contents__navigation-text {
+      @include mixin.media(sm) {
+        margin-right: 15px;
+      }
+    }
   }
 
   &__navigation-next {
     justify-self: end;
 
-    // & .blog-contents__navigation-text {
-    //   @include mixin.media(sm) {
-    //     margin-left: 15px;
-    //   }
-    // }
+    & .blog-contents__navigation-text {
+      @include mixin.media(sm) {
+        margin-left: 15px;
+      }
+    }
   }
 
   &__navigation-prev a,
