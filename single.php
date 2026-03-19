@@ -30,7 +30,7 @@
             Back to List
           </a>
           <div class="blog-contents__navigation-next">
-            <?php next_post_link('%link', '<span class="blog-contents__navigation-text">Next</span><span class="blog-contents__navigation-icon">→</span'); ?>
+            <?php next_post_link('%link', '<span class="blog-contents__navigation-text">Next</span><span class="blog-contents__navigation-icon">→</span>'); ?>
           </div>
         </nav>
       </article>
