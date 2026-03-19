@@ -10,8 +10,8 @@
       <article class="blog-contents">
         <div class="blog-contents__item-area">
           <h1 class="blog-contents__heading"><?php the_title(); ?></h1>
-          <time class="blog-contents__date">
-            <?php echo get_the_date(); ?>
+          <time datetime="<?php echo esc_attr(get_the_date('c')); ?>">
+            <?php echo esc_html(get_the_date()); ?>
           </time>
           <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('large', [
