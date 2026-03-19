@@ -231,7 +231,7 @@ Common styles for pages
 ================================================ */
 .hero {
   height: calc(100dvh - 50px);
-  background-image: url('../images/front-page/bg-main-sp.jpg');
+  background-image: url('../images/front-page/bg-main-mobile.webp');
   align-items: flex-start;
   background-repeat: no-repeat;
   background-position: center;
@@ -241,7 +241,7 @@ Common styles for pages
 @media (min-width: 640px) {
   .hero {
     height: calc(100dvh - 110px);
-    background-image: url('../images/front-page/bg-main.jpg');
+    background-image: url('../images/front-page/bg-main.webp');
     align-items: center;
   }
 }
