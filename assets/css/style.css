@@ -21,6 +21,7 @@ a {
 
 html {
   font-size: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -114,6 +115,7 @@ header
   background-color: #736e62;
   padding-top: 30px;
   padding-bottom: 50px;
+  z-index: 3;
   transform: translateX(100%);
   transition: transform 300ms ease;
 }
@@ -148,6 +150,24 @@ header
   .header__site-menu-list > li {
     margin-top: 0;
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms;
+}
+
+.overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
 }
 
 /*
