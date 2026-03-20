@@ -236,7 +236,11 @@ blog single page
   }
 
   &__navigation-icon {
-    padding: 0 4px;
+    font-weight: bold;
+
+    @include mixin.media(sm) {
+      padding: 0 6px;
+    }
   }
 
   &__navigation-text {

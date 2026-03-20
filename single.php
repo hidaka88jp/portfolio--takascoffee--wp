@@ -25,13 +25,13 @@
         <?php $url = get_post_type_archive_link('post') ?: home_url('/'); ?>
         <nav class="blog-contents__navigation">
           <div class="blog-contents__navigation-prev">
-            <?php previous_post_link('%link', '<span class="blog-contents__navigation-icon">←</span><span class="blog-contents__navigation-text">Previous</span>'); ?>
+            <?php previous_post_link('%link', '<span class="blog-contents__navigation-icon">&lt;</span><span class="blog-contents__navigation-text">Previous</span>'); ?>
           </div>
           <a href="<?php echo esc_url($url); ?>" class="link-button">
             Back to List
           </a>
           <div class="blog-contents__navigation-next">
-            <?php next_post_link('%link', '<span class="blog-contents__navigation-text">Next</span><span class="blog-contents__navigation-icon">→</span>'); ?>
+            <?php next_post_link('%link', '<span class="blog-contents__navigation-text">Next</span><span class="blog-contents__navigation-icon">&gt;</span>'); ?>
           </div>
         </nav>
       </article>

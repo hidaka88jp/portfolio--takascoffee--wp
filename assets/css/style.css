@@ -854,7 +854,12 @@ blog single page
   }
 }
 .blog-contents__navigation-icon {
-  padding: 0 4px;
+  font-weight: bold;
+}
+@media (min-width: 640px) {
+  .blog-contents__navigation-icon {
+    padding: 0 6px;
+  }
 }
 .blog-contents__navigation-text {
   display: none;
