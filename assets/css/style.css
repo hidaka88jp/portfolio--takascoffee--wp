@@ -761,7 +761,7 @@ blog single page
   width: 36px;
   height: 3px;
   background-color: #1c1f20;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 .blog-contents__date {
   display: block;
