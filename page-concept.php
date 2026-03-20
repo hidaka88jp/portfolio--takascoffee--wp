@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <main class="page-content concept">
-
   <div class="page-hero">
     <h1 class="page-hero__title"><?php the_title(); ?></h1>
   </div>
@@ -17,7 +16,6 @@
   ?>
 
   <section class="concept-section">
-
     <div class="concept-section__item">
       <div class="concept-section__text-area">
         <h2 class="concept-section__subtitle"><?php echo esc_html($title1); ?></h2>
@@ -44,7 +42,6 @@
         >
       <?php endif; ?>
     </div>
-
   </section>
 </main>
 
