@@ -137,12 +137,9 @@ reccomended
   &__item-list {
     display: flex;
     gap: 30px;
-    padding: {
-      inset: 40px 20px 10px 20px;
 
-      // Move the left and right padding from scroll to the item list to prevent iOS Safari WebKit bug where the right padding is not included in the scrollable area of the scroll container with overflow-x: auto.
-    }
-
+    // Move the left and right padding from scroll to the item list to prevent iOS Safari WebKit bug where the right padding is not included in the scrollable area of the scroll container with overflow-x: auto.
+    padding: 40px 20px 10px;
     width: fit-content;
     margin: 0 auto;
 
