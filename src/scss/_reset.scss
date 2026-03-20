@@ -25,7 +25,9 @@ a {
 
 html {
   font-size: 100%;
-  overflow-x: hidden;
+
+  // Use clip instead of hidden to prevent issues with fixed elements.
+  overflow-x: clip;
 }
 
 body {
@@ -33,7 +35,7 @@ body {
   color: variables.$color-text;
   line-height: 1.6;
   background-color: #fff;
-  overflow-x: hidden;
+  overflow-x: clip; // Same as above, to prevent horizontal scrolling issues.
 }
 
 img {

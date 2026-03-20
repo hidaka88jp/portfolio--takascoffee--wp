@@ -21,7 +21,7 @@ a {
 
 html {
   font-size: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -29,7 +29,7 @@ body {
   color: #1c1f20;
   line-height: 1.6;
   background-color: #fff;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img {
@@ -366,10 +366,7 @@ reccomended
 .recommended__item-list {
   display: flex;
   gap: 30px;
-  padding-top: 40px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-inset: 40px 20px 10px 20px;
   width: fit-content;
   margin: 0 auto;
 }
