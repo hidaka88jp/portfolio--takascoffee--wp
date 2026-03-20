@@ -19,7 +19,7 @@
               <a href="<?php echo esc_url( get_permalink() ); ?>" class="blog-list__link">
 
                 <?php if ( has_post_thumbnail() ) : ?>
-                  <?php the_post_thumbnail('medium', [
+                  <?php the_post_thumbnail('large', [
                     'class' => 'blog-list__image'
                   ]); ?>
                 <?php endif; ?>
