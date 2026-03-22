@@ -2,7 +2,7 @@
 
 <main class="page-content blog">
   <div class="page-hero">
-    <?php esc_html_e('Blog', 'takascoffee'); ?>
+    <span class="page-hero__title"><?php esc_html_e('Blog', 'takascoffee'); ?></span>
   </div>
 
   <?php if (have_posts()) : ?>
