@@ -7,6 +7,7 @@
 
   <ul class="menu-list">
     <?php
+      // Fixed category order based on UI requirements (drink → food → dessert)
       $categories = ['drink', 'food', 'dessert'];
 
       foreach ($categories as $category) :
