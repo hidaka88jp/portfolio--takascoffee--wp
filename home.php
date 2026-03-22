@@ -13,8 +13,9 @@
             <article>
               <a href="<?php echo esc_url( get_permalink() ); ?>" class="blog-list__link">
                 <?php if ( has_post_thumbnail() ) : ?>
-                  <?php the_post_thumbnail('large', [
-                    'class' => 'blog-list__image'
+                  <?php the_post_thumbnail('medium', [
+                    'class' => 'blog-list__image',
+                    'sizes' => '(min-width: 640px) 360px, 100vw'
                   ]); ?>
                 <?php endif; ?>
                 <div class="blog-list__desc">
