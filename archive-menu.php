@@ -35,7 +35,14 @@
                   <dt class="menu-list__item-name"><?php the_title(); ?></dt>
                   <dd class="menu-list__item-sentence"><?php the_excerpt(); ?></dd>
                 </dl>
-                <p class="menu-list__price">$<?php echo esc_html(get_field('price')); ?></p>
+                <?php
+                  $price = function_exists('get_field') ? get_field('price') : '';
+                  if ($price) :
+                ?>
+                  <p class="menu-list__price">
+                    $<?php echo esc_html($price); ?>
+                  </p>
+                <?php endif; ?>
                 <?php
                   $terms = get_the_terms( get_the_ID(), 'menu_category' );
                   if ( $terms && ! is_wp_error( $terms ) ) :
