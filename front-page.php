@@ -55,7 +55,14 @@
             <dt class="recommended__item-name"><?php the_title(); ?></dt>
             <dd class="recommended__item-sentence"><?php the_excerpt(); ?></dd>
           </dl>
-          <p class="recommended__price">$<?php echo esc_html( get_field('price') ); ?></p>
+          <?php
+            $price = function_exists('get_field') ? get_field('price') : '';
+            if ($price) :
+          ?>
+            <p class="recommended__price">
+              $<?php echo esc_html($price); ?>
+            </p>
+          <?php endif; ?>
         </li>
         <?php
             endwhile;
