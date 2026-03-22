@@ -1,3 +1,5 @@
+@use './variables';
+
 /*
 Common CSS Reset
 ================================================ */
@@ -23,14 +25,17 @@ a {
 
 html {
   font-size: 100%;
+
+  // Use clip instead of hidden to prevent issues with fixed elements.
+  overflow-x: clip;
 }
 
 body {
   font-family: sans-serif;
-  color: #000;
+  color: variables.$color-text;
   line-height: 1.6;
   background-color: #fff;
-  overflow-x: hidden;
+  overflow-x: clip; // Same as above, to prevent horizontal scrolling issues.
 }
 
 img {

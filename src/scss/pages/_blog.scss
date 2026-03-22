@@ -145,7 +145,7 @@ blog single page
       width: 36px;
       height: 3px;
       background-color: variables.$color-text;
-      margin-top: 10px;
+      margin: 10px 0;
     }
   }
 
@@ -236,7 +236,11 @@ blog single page
   }
 
   &__navigation-icon {
-    padding: 0 4px;
+    font-weight: bold;
+
+    @include mixin.media(sm) {
+      padding: 0 6px;
+    }
   }
 
   &__navigation-text {

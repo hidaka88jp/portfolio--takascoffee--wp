@@ -1,5 +1,5 @@
 $white: #fff;
-$black: #000;
+$black: #1c1f20;
 $color-accent: #f4dd64;
 $color-accent-hover: #d8b500;
 
@@ -13,7 +13,7 @@ $color-link-hover: $color-accent-hover;
 // surfaces
 $color-surface: #f8f8f8; // Background color for the main content area if needed.
 $color-nav-surface: #736e62; // Mobile navigation background color
-$color-footer-surface: #24211b; // Footer background color
+$color-footer-surface: $black; // Footer background color
 
 // action (button)
 $color-button: $color-accent;

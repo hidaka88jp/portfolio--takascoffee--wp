@@ -4,8 +4,8 @@
 /* hero
 ================================================ */
 .hero {
-  height: calc(100dvh - 50px);
-  background-image: url('../images/front-page/bg-main-sp.jpg');
+  height: calc(100svh - 50px);
+  background-image: url('../images/front-page/bg-main-mobile.webp');
   align-items: flex-start;
   background-repeat: no-repeat;
   background-position: center;
@@ -13,8 +13,8 @@
   display: flex;
 
   @include mixin.media(sm) {
-    height: calc(100dvh - 110px);
-    background-image: url('../images/front-page/bg-main.jpg');
+    height: calc(100svh - 110px);
+    background-image: url('../images/front-page/bg-main.webp');
     align-items: center;
   }
 
@@ -132,32 +132,23 @@ reccomended
 
   &__scroll {
     overflow-x: auto;
-    padding: {
-      left: 20px;
-      right: 20px;
-    }
-
-    @include mixin.media(lg) {
-      padding: {
-        left: 60px;
-        right: 60px;
-      }
-    }
   }
 
   &__item-list {
     display: flex;
     gap: 30px;
-    padding: {
-      top: 40px;
-      bottom: 10px;
-    }
 
+    // Move the left and right padding from scroll to the item list to prevent iOS Safari WebKit bug where the right padding is not included in the scrollable area of the scroll container with overflow-x: auto.
+    padding: 40px 20px 10px;
     width: fit-content;
     margin: 0 auto;
 
     @include mixin.media(lg) {
       gap: 75px;
+
+      // Same reason as above, move the right padding to the item list.
+      padding-left: 60px;
+      padding-right: 60px;
     }
   }
 

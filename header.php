@@ -26,6 +26,6 @@
             )
         ); ?>
       </div>
-      </div><!-- /.site-menu -->
     </div><!-- /.header__inner -->
   </header>
+  <div class="overlay"></div>
