@@ -2,7 +2,7 @@
 
 <main class="page-content menu">
   <div class="page-hero">
-    <h1 class="page-hero__title">Menu</h1>
+    <?php esc_html_e('Menu', 'takascoffee'); ?>
   </div>
 
   <ul class="menu-list">
