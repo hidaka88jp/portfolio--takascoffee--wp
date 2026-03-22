@@ -9,7 +9,7 @@
   <?php wp_body_open(); ?>
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo">
+      <a href="<?php echo esc_url( home_url('/') ); ?>" class="header__logo">
         <img 
           class="site-logo"
           src="<?php echo esc_url( get_theme_file_uri('/assets/images/common/logo-header.png') ); ?>"
