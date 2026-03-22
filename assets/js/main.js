@@ -17,4 +17,12 @@ if (menuBtn && siteMenu && overlay) {
     overlay.classList.remove('is-open');
     menuBtn.setAttribute('aria-expanded', false);
   });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      siteMenu.classList.remove('is-open');
+      overlay.classList.remove('is-open');
+      document.body.classList.remove('is-menu-open');
+    }
+  });
 }
