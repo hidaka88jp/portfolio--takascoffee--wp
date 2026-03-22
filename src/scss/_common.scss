@@ -151,12 +151,12 @@ header
   opacity: 0;
   visibility: hidden;
   transition: 300ms;
+  z-index: 2;
 }
 
 .overlay.is-open {
   opacity: 1;
   visibility: visible;
-  z-index: 2;
 }
 
 /*
