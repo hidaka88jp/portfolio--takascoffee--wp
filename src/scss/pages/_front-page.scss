@@ -4,7 +4,7 @@
 /* hero
 ================================================ */
 .hero {
-  height: calc(100dvh - 50px);
+  height: calc(100svh - 50px);
   background-image: url('../images/front-page/bg-main-mobile.webp');
   align-items: flex-start;
   background-repeat: no-repeat;
@@ -13,7 +13,7 @@
   display: flex;
 
   @include mixin.media(sm) {
-    height: calc(100dvh - 110px);
+    height: calc(100svh - 110px);
     background-image: url('../images/front-page/bg-main.webp');
     align-items: center;
   }
