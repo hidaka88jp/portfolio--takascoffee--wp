@@ -37,9 +37,9 @@
                   <a href="<?php echo esc_url(get_permalink($recommended_post)); ?>" class="menu-contents__link">
                     <?php echo get_the_post_thumbnail($recommended_post->ID, 'medium'); ?>
                     <dl class="menu-contents__item-desc">
-                      <dt class="menu-contents__item-name"><?php echo get_the_title($recommended_post); ?></dt>
+                      <dt class="menu-contents__item-name"><?php echo esc_html( get_the_title($recommended_post) ); ?></dt>
                       <dd class="menu-contents__item-sentence">
-                        <?php echo get_the_excerpt($recommended_post); ?>
+                        <?php echo esc_html( get_the_excerpt($recommended_post) ); ?>
                       </dd>
                     </dl>
                   </a>
