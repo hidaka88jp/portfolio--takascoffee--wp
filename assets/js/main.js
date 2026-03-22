@@ -19,10 +19,10 @@ if (menuBtn && siteMenu && overlay) {
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 640) {
       siteMenu.classList.remove('is-open');
       overlay.classList.remove('is-open');
-      document.body.classList.remove('is-menu-open');
+      menuBtn.setAttribute('aria-expanded', false);
     }
   });
 }
