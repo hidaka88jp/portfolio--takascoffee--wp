@@ -8,7 +8,7 @@ const overlay = document.querySelector('.overlay');
 if (menuBtn && siteMenu && overlay) {
   menuBtn.addEventListener('click', () => {
     const isOpen = siteMenu.classList.toggle('is-open');
-    overlay.classList.toggle('is-open');
+    overlay.classList.toggle('is-open', isOpen);
     menuBtn.setAttribute('aria-expanded', isOpen);
   });
 
