@@ -20,13 +20,20 @@
               <div class="menu-contents__item-text">
                 <?php the_content(); ?>
               </div>
-              <p class="menu-contents__item-price">$<?php echo esc_html( get_field('price') ); ?></p>
+              <?php
+                $price = function_exists('get_field') ? get_field('price') : '';
+                if ($price) :
+              ?>
+                <p class="menu-contents__item-price">
+                  $<?php echo esc_html($price); ?>
+                </p>
+              <?php endif; ?>
             </div><!-- menu-contents__about-item -->
           </div><!-- menu-contents__item-area -->
         </div><!-- menu-contents__items -->
 
         <?php
-          $recommended_items = get_field('recommended_items');
+          $recommended_items = function_exists('get_field') ? get_field('recommended_items') : [];
           if ($recommended_items) :
         ?>
           <section class="menu-contents__recommended">
