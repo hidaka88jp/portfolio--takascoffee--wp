@@ -6,17 +6,25 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+  <?php wp_body_open(); ?>
   <header class="header">
     <div class="header__inner">
-      <a href="/" class="header__logo">
+      <a href="<?php echo esc_url( home_url('/') ); ?>" class="header__logo">
         <img 
           class="site-logo"
           src="<?php echo esc_url( get_theme_file_uri('/assets/images/common/logo-header.png') ); ?>"
           alt="<?php echo esc_attr( get_bloginfo('name') ); ?>"
         >
       </a>
-      <button class="header__toggle-menu-btn" id="menu-btn"></button>
-      <div class="header__site-menu">
+      <button 
+        type="button"
+        class="header__toggle-menu-btn" 
+        id="menu-btn"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="site-menu"
+      ></button>
+      <div class="header__site-menu" id="site-menu">
         <?php wp_nav_menu(
             array(
               'theme_location' => 'primary-navigation',

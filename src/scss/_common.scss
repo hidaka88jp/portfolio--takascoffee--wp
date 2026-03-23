@@ -165,14 +165,17 @@ footer
 .footer {
   color: variables.$color-text-inverse;
   background-color: variables.$color-footer-surface;
-  padding: {
-    top: 30px;
-    bottom: 30px;
-  }
-
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include mixin.media(sm) {
+    padding: {
+      left: 40px;
+      right: 40px;
+    }
+  }
 
   &__site-menu {
     &-list {
