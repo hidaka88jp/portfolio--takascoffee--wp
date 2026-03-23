@@ -17,6 +17,7 @@
         >
       </a>
       <button 
+        type="button"
         class="header__toggle-menu-btn" 
         id="menu-btn"
         aria-label="Toggle menu"
