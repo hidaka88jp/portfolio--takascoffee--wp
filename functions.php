@@ -71,3 +71,6 @@ function takascoffee_custom_excerpt_more($more) {
   return '...';
 }
 add_filter('excerpt_more', 'takascoffee_custom_excerpt_more');
+
+// Disable XML-RPC to enhance security by preventing remote access to WordPress features.
+add_filter('xmlrpc_enabled', '__return_false');
