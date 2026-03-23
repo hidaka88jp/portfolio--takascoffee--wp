@@ -16,8 +16,14 @@
           alt="<?php echo esc_attr( get_bloginfo('name') ); ?>"
         >
       </a>
-      <button class="header__toggle-menu-btn" id="menu-btn"></button>
-      <div class="header__site-menu">
+      <button 
+        class="header__toggle-menu-btn" 
+        id="menu-btn"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="site-menu"
+      ></button>
+      <div class="header__site-menu" id="site-menu">
         <?php wp_nav_menu(
             array(
               'theme_location' => 'primary-navigation',
