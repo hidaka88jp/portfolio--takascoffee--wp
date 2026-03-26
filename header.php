@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php if (is_singular() && !is_front_page()): ?>
     <?php
-      $description = get_the_excerpt() ?: get_bloginfo('description');
+      $raw_excerpt = get_the_excerpt();
+      $clean_excerpt = wp_strip_all_tags($raw_excerpt);
+      $description = $clean_excerpt ?: get_bloginfo('description');
+
       $og_image = get_the_post_thumbnail_url(null, 'large') ?: get_theme_file_uri('/assets/images/common/ogp.jpg');
     ?>
     <meta property="og:title" content="<?php echo esc_attr(get_the_title()); ?>">
