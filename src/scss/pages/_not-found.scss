@@ -1,0 +1,55 @@
+@use '../mixin';
+@use '../variables';
+
+/*
+404 page
+================================================ */
+.not-found {
+  width: 765px;
+  max-width: 100%;
+  margin: 60px auto 0;
+  padding: 0 20px;
+
+  @include mixin.media(sm) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+
+    @include mixin.media(sm) {
+      width: 360px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 3px;
+      background-color: variables.$color-text;
+      margin-top: 20px;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: 25px;
+  }
+
+  &__link-button-area {
+    @include mixin.link-button-area;
+  }
+}

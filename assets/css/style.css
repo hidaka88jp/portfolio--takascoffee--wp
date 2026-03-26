@@ -225,6 +225,53 @@ img {
 .page-content {
   margin-bottom: 100px;
 }
+.not-found {
+  width: 765px;
+  max-width: 100%;
+  margin: 60px auto 0;
+  padding: 0 20px;
+}
+@media (min-width: 640px) {
+  .not-found {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+.not-found__image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+@media (min-width: 640px) {
+  .not-found__image {
+    width: 360px;
+    margin-bottom: 0;
+  }
+}
+.not-found__title {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
+}
+.not-found__title::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: #1c1f20;
+  margin-top: 20px;
+}
+.not-found__text {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-top: 25px;
+}
+.not-found__link-button-area {
+  margin-top: 40px;
+  text-align: center;
+}
 .hero {
   height: calc(100svh - 50px);
   background-image: url('../images/front-page/bg-main-mobile.webp');
