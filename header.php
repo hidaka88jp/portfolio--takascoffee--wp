@@ -14,14 +14,12 @@
     <meta property="og:url" content="<?php echo esc_url(get_permalink()); ?>">
     <meta property="og:type" content="article">
   <?php elseif (is_post_type_archive() || is_home()): ?>
-    <!-- 一覧ページ -->
     <meta property="og:title" content="<?php echo esc_attr(wp_get_document_title()); ?>">
     <meta property="og:description" content="<?php echo esc_attr(get_bloginfo('description')); ?>">
     <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/ogp.jpg'); ?>">
     <meta property="og:url" content="<?php echo esc_url(get_pagenum_link()); ?>">
     <meta property="og:type" content="website">
   <?php else: ?>
-    <!-- その他（トップなど） -->
     <meta property="og:title" content="<?php echo esc_attr(get_bloginfo('name')); ?>">
     <meta property="og:description" content="<?php echo esc_attr(get_bloginfo('description')); ?>">
     <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/ogp.jpg'); ?>">
