@@ -26,7 +26,7 @@
     <meta property="og:title" content="<?php echo esc_attr(get_bloginfo('name')); ?>">
     <meta property="og:description" content="<?php echo esc_attr(get_bloginfo('description')); ?>">
     <meta property="og:image" content="<?php echo esc_url(get_theme_file_uri('/assets/images/common/ogp.jpg')); ?>">
-    <meta property="og:url" content="<?php echo esc_url(home_url('/')); ?>">
+    <meta property="og:url" content="<?php echo esc_url(get_pagenum_link()); ?>">
     <meta property="og:type" content="website">
   <?php endif; ?>
   <meta name="twitter:card" content="summary_large_image">
