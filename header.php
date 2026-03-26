@@ -3,22 +3,32 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <?php if (is_singular()): ?>
-  <?php
-    $description = get_the_excerpt() ?: get_bloginfo('description');
-    $og_image = get_the_post_thumbnail_url(null, 'large') ?: get_template_directory_uri() . '/assets/images/common/ogp.jpg';
-  ?>
+  <?php if (is_singular() && !is_front_page()): ?>
+    <?php
+      $description = get_the_excerpt() ?: get_bloginfo('description');
+      $og_image = get_the_post_thumbnail_url(null, 'large') ?: get_template_directory_uri() . '/assets/images/common/ogp.jpg';
+    ?>
     <meta property="og:title" content="<?php echo esc_attr(get_the_title()); ?>">
     <meta property="og:description" content="<?php echo esc_attr($description); ?>">
     <meta property="og:image" content="<?php echo esc_url($og_image); ?>">
     <meta property="og:url" content="<?php echo esc_url(get_permalink()); ?>">
+    <meta property="og:type" content="article">
+  <?php elseif (is_post_type_archive() || is_home()): ?>
+    <!-- 一覧ページ -->
+    <meta property="og:title" content="<?php echo esc_attr(wp_get_document_title()); ?>">
+    <meta property="og:description" content="<?php echo esc_attr(get_bloginfo('description')); ?>">
+    <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/ogp.jpg'); ?>">
+    <meta property="og:url" content="<?php echo esc_url(get_pagenum_link()); ?>">
+    <meta property="og:type" content="website">
   <?php else: ?>
-    <meta property="og:title" content="<?php bloginfo('name'); ?>">
-    <meta property="og:description" content="<?php bloginfo('description'); ?>">
-    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/images/common/ogp.jpg">
+    <!-- その他（トップなど） -->
+    <meta property="og:title" content="<?php echo esc_attr(get_bloginfo('name')); ?>">
+    <meta property="og:description" content="<?php echo esc_attr(get_bloginfo('description')); ?>">
+    <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/ogp.jpg'); ?>">
     <meta property="og:url" content="<?php echo esc_url(home_url('/')); ?>">
+    <meta property="og:type" content="website">
   <?php endif; ?>
-  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
