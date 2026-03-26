@@ -6,7 +6,7 @@
   <?php if (is_singular() && !is_front_page()): ?>
     <?php
       $description = get_the_excerpt() ?: get_bloginfo('description');
-      $og_image = get_the_post_thumbnail_url(null, 'large') ?: get_template_directory_uri() . '/assets/images/common/ogp.jpg';
+      $og_image = get_the_post_thumbnail_url(null, 'large') ?: get_theme_file_uri('/assets/images/common/ogp.jpg');
     ?>
     <meta property="og:title" content="<?php echo esc_attr(get_the_title()); ?>">
     <meta property="og:description" content="<?php echo esc_attr($description); ?>">
@@ -16,13 +16,13 @@
   <?php elseif (is_post_type_archive() || is_home()): ?>
     <meta property="og:title" content="<?php echo esc_attr(wp_get_document_title()); ?>">
     <meta property="og:description" content="<?php echo esc_attr(get_bloginfo('description')); ?>">
-    <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/ogp.jpg'); ?>">
+    <meta property="og:image" content="<?php echo esc_url(get_theme_file_uri('/assets/images/common/ogp.jpg')); ?>">
     <meta property="og:url" content="<?php echo esc_url(get_pagenum_link()); ?>">
     <meta property="og:type" content="website">
   <?php else: ?>
     <meta property="og:title" content="<?php echo esc_attr(get_bloginfo('name')); ?>">
     <meta property="og:description" content="<?php echo esc_attr(get_bloginfo('description')); ?>">
-    <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri() . '/assets/images/common/ogp.jpg'); ?>">
+    <meta property="og:image" content="<?php echo esc_url(get_theme_file_uri('/assets/images/common/ogp.jpg')); ?>">
     <meta property="og:url" content="<?php echo esc_url(home_url('/')); ?>">
     <meta property="og:type" content="website">
   <?php endif; ?>
