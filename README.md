@@ -2,9 +2,9 @@
 
 <div align="center">
   <img src="./.github/assets/screenshot-desktop.webp" width="74%" alt="desktop">
-  <img src="./.github/assets/screenshot-mobile.webp" width="22.3%" alt="moblie">
+  <img src="./.github/assets/screenshot-mobile.webp" width="22.3%" alt="mobile">
   <br><br>
-  <a href="https://takascoffee.takanorihidaka.com/" target="_blank">
+  <a href="https://takascoffee.takanorihidaka.com/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/VIEW_DEMO-f4dd64.svg?style=for-the-badge&logo=vercel&logoColor=black" alt="View Demo" />
   </a>
   <br><br>
@@ -77,7 +77,7 @@ In the local environment, I ran WordPress using Docker containers and mounted th
 
 ```
 /wp-project/
-  ├── docker-compose.yml/
+  ├── docker-compose.yml
   ├── wp-plugins/
   ├── wp-uploads/
   ├── wp-config.php
@@ -129,6 +129,7 @@ However, after completing the project, I conducted a full review using Codex and
     <td>
       <img src="https://img.shields.io/badge/HTML (WordPress template)-E34F26.svg?logo=html5&logoColor=efefef">
       <img src="https://img.shields.io/badge/Sass-CC6699.svg?logo=sass&logoColor=efefef">
+      <img src="https://img.shields.io/badge/BEM-4C4D59.svg?logo=bem&logoColor=efefef">
       <img src="https://img.shields.io/badge/JavaScript-4C4D59.svg?logo=javascript">
     </td>
   </tr>
