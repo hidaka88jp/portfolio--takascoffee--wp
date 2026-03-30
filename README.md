@@ -12,7 +12,6 @@
     <a href="#overview">Overview</a> •
     <a href="#what-i-learned">What I Learned</a> •
     <a href="#tech-stack">Tech Stack</a> •
-    <a href="#installation">Installation</a> •
     <a href="#license">License</a>
   </p>
 </div>
@@ -58,6 +57,7 @@ Basic constructs such as conditionals and ternary operators are largely similar 
 - Meta & Internationalization
   - Setting up OGP metadata
   - Basic i18n support (no translation files implemented)
+<br>
 
 ### Project Setup & Frontend Workflow
 
@@ -66,6 +66,7 @@ For the custom theme setup, I introduced development tools such as Sass, Prettie
 While working on the project, I based my approach on my experience with Next.js, constantly thinking, “How would this be implemented in WordPress?” and structuring the tools and setup accordingly.  
 
 Although the frameworks are different, I found that the overall development workflow-setting up tools, preparing layout components such as headers and footers, and then building the main content-shares many common patterns.  
+<br>
 
 ### Local Development Environment (Docker)
 
@@ -88,6 +89,7 @@ In the local environment, I ran WordPress using Docker containers and mounted th
          │     ...
          └── package.json
 ```
+<br>
 
 ### Deployment (AWS Lightsail)
 
@@ -100,6 +102,7 @@ To keep the setup simple, I deployed the application using the Bitnami WordPress
 - Applied basic security practices, including disabling XML-RPC, creating a new admin user, limiting login attempts, enabling automatic updates, and setting appropriate permissions for `wp-config.php`
 - Verified both deployment methods: uploading a ZIP file via the WordPress admin panel and deploying via GitHub using clone/pull in the themes directory
 - Migrated data from the local environment to the production WordPress instance
+<br>
 
 ### Development Workflow (GitHub & PR)
 
