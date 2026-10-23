@@ -20,7 +20,7 @@
 ## Overview
 
 This project involves building a custom WordPress theme for a café-style website.  
-The local development environment was set up using Docker, and the site is deployed on AWS Lightsail (Bitnami).
+The local development environment was set up using Docker, and the site is deployed on AWS Lightsail.
 
 Previously, I built several portfolio projects using Next.js with a headless CMS (microCMS). While this architecture is modern and flexible, it requires managing both the frontend (e.g., Vercel) and the CMS separately. I began to question whether this setup is always appropriate for small-scale projects or corporate websites.
 
@@ -29,7 +29,7 @@ With WordPress, the entire system can be managed on a single server, making depl
 Additionally, as a frontend engineer, I wanted to gain hands-on experience with custom theme development.
 
 This project also serves as a foundation for future work. Since WordPress is widely used and familiar to many users, it can be used as a headless CMS while retaining its traditional admin interface.  
-As a next step, I plan to use this WordPress setup as a headless CMS and build a separate frontend using Next.js that consumes the same data.
+I also built a separate frontend using Next.js, with this WordPress site serving as a headless CMS through the WordPress REST API.
 
 <br>
 
@@ -96,9 +96,13 @@ In the local environment, I ran WordPress using Docker containers and mounted th
 I chose AWS Lightsail because it is relatively easy to use and allows for straightforward cost management. I had also used it in previous portfolio projects.  
 Since the primary focus of this project was custom theme development, I intentionally avoided spending too much time on infrastructure.  
 
-To keep the setup simple, I deployed the application using the Bitnami WordPress image on Lightsail, without relying on additional AWS services such as load balancers.
+I initially considered both the Bitnami WordPress image and the WordPress by Lightsail image. Based on my research at the time, I chose Bitnami because its `bncert-tool` offered a straightforward way to enable HTTPS without using an AWS load balancer or managing DNS through AWS.
 
-- Enabled SSL using the Bitnami `bncert-tool`
+Later, when support for the Bitnami image ended, I needed to migrate the site. While researching the migration, I found that the WordPress by Lightsail image could also support HTTPS using Certbot and Apache, without requiring an AWS load balancer or AWS-managed DNS.
+
+In the end, both options could meet my original requirements, and I migrated the site to WordPress by Lightsail.
+
+- Configured HTTPS using Certbot and Apache, with automatic certificate renewal
 - Applied basic security practices, including disabling XML-RPC, creating a new admin user, limiting login attempts, enabling automatic updates, and setting appropriate permissions for `wp-config.php`
 - Verified both deployment methods: uploading a ZIP file via the WordPress admin panel and deploying via GitHub using clone/pull in the themes directory
 - Migrated data from the local environment to the production WordPress instance
